@@ -23,8 +23,11 @@ const queryClient = new QueryClient()
 
 export const metadata: Metadata = {
   title: 'GrokBase — Mini Grok on Base',
-  description: 'Mini Grok on Base | AI Chat for Base builders, grants, trading & memes',
+  description: 'Mini Grok on Base | AI Chat for Base builders, grants, trading & memes. Built by @afifarioss',
   icons: '/favicon.ico',
+  other: {
+    'talentapp:project_verification': '2dfd15ab8ee2bf871bf00997a9b8480d98de3e42d289e0d3e5e250c30feceed92a5212e364f8dac86971b783e0f01ffd8d1c677c7ac52c0bbc22b9e68e447cd0',
+  },
 }
 
 export default function RootLayout({
@@ -34,7 +37,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} bg-black text-green-400`}>
+      <body className={`${inter.className} bg-black text-green-400 min-h-screen`}>
         <WagmiProvider config={config}>
           <QueryClientProvider client={queryClient}>
             <ConnectKitProvider>
